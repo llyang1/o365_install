@@ -36,7 +36,7 @@ reboot
 
 killPID(){
 
-myPID=$(ps -ef | grep o365 | grep -v grep | awk '{print $2}')
+myPID=$(ps -ef | grep o365 | grep -v grep  | grep -v install | awk '{print $2}')
 for PID in ${myPID[@]}; do
   kill -9 $PID
 done
@@ -47,3 +47,4 @@ read -p "回车确认" -t60
 checkJava
 killPID
 getLast
+# THE END
