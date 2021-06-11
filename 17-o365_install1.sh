@@ -24,7 +24,7 @@ cd /home/
 curl -OL $myURI
 
 (crontab -l | grep -v 'o365') | crontab
-(crontab -l ; echo "@reboot ${myJava} -jar /home/o365-1.1.2.jar") | crontab -
+(crontab -l ; echo "@reboot ${myJava} -jar /home/${myFile}") | crontab -
 (crontab -l ; echo "11 * * * * /usr/bin/rclone copy /root/data/o365.mv.db Dropbox:/VPN") | crontab -
 localIP=$(hostname -I | sed 's_ __g')
 echo "浏览器地址"
