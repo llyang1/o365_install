@@ -23,7 +23,7 @@ cd /home/
 curl -OL $myURI
 
 (crontab -l | grep -v 'o365') | crontab
-(crontab -l ; echo "@reboot ${myJava} -jar /home/${$myFile}") | crontab -
+(crontab -l ; echo "@reboot ${myJava} -jar /home/${myFile}") | crontab -
 localIP=$(hostname -I | sed 's_ __g')
 echo "浏览器地址"
 echo "------------------------------"
